@@ -1,1 +1,64 @@
 
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body, html{
+  height: 100%;
+  font-size: 16px;
+  font-family:sans-serif;
+  font-weight: 400;
+  line-height: 1.8em;
+}
+section {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #111827;
+  padding-bottom: 1rem;
+}
+.game-title{
+  padding: 1rem;
+  color: #eee;
+  font-size: 1.5em;
+  font-weight: bold;
+  font-family: Helvetica;
+}
+.gameofcontainer {
+  width: 500px;
+  height: 500px;
+  background-color: #111827;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+}
+.cell{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 75px;
+  color: #eee;
+  font-weight: bold;
+}
+.cell:not(:nth-child(3n)){
+  border-right: 5px double rgba(255, 255, 255, 1);
+}
+.cell:not(:nth-last-child(-n+3)){
+  border-bottom: 5px double rgba(255, 255, 255, 1);
+}
+.status{
+  color: green;
+}
+.restart {
+  font-size: 24px;
+  border: none;
+  padding: 10px 80px;
+  border-radius: 10px;
+  background: black;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+}
